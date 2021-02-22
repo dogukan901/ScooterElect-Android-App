@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">S(cooter)Elect</string>
+    <string name="title">Selam</string>
+    <string name="editText">Buraya Giriniz...</string>
+    <string name="userPlaceHolder">Kullanıcı adı</string>
+    <string name="passwordPlaceHolder">Şifre</string>
+    <string name="buttonText">Yazılanı Göster butonu</string>
+    <string name="buttonSendText">Yolla </string>
+    <string name="buttonGotoB">B\'ye git </string>
+    <string name="passwordcheckBox">Şifre Göster </string>
+    <string name="strowpollText">Anket </string>
+    <string name="strowquestionText">Hangi E-scooter Modelini Tercih Ediyorsunuz? </string>
+    <string name="needhelpPlaceHolder"> <a href="https://google.com/">Yardıma ihtiyacım var?</a>
+</string>
+    <string name="buttonLogin">Giriş Yap</string>
+    <string name="welcomeText">S(cooter)\nElectrical\'a Hoşgeldiniz</string>
+</resources>

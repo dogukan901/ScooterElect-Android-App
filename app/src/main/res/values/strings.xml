@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">S(cooter)Elect</string>
+    <string name="title">Hello There</string>
+    <string name="editText">Enter here...</string>
+    <string name="userPlaceHolder">Username</string>
+    <string name="passwordPlaceHolder">Password</string>
+    <string name="buttonText">Show your text button</string>
+    <string name="buttonSendText">Send Now</string>
+    <string name="buttonGotoB">Go to B </string>
+    <string name="passwordcheckBox">Show Password </string>
+    <string name="strowpollText">Strowpoll </string>
+    <string name="strowquestionText">Which E-scooter model you prefer to use? </string>
+    <string name="needhelpPlaceHolder"> <a href="https://youtu.be/X7hQqsju2uo">Need some help?</a>
+</string>
+    <string name="buttonLogin">Login</string>
+    <string name="welcomeText">Welcome to S(cooter) \nElectrical</string>
+
+    <!--Hello There
+    Username
+    Password
+    Show your text button
+    Enter here...-->
+</resources>
