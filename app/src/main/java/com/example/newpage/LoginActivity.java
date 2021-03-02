@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.newpage.dao.DatabaseCopyHelper;
 import com.example.newpage.dao.DatabaseHelper;
+import com.example.newpage.dao.escootersdao;
 import com.example.newpage.dao.usersdao;
 import com.example.newpage.objects.escooters;
 import com.example.newpage.objects.users;
@@ -74,17 +75,20 @@ public class LoginActivity extends AppCompatActivity /*implements View.OnTouchLi
                 db = new DatabaseHelper(LoginActivity.this);
                 // new usersdao().addUser(db, "Dogukan", "ankara0634", "xiaomi");//elle kullanıcı ekleme
                 //new escooters(31,"model not selected yet","no escooter name yet","155","2019");
-                escooters esc = new escooters();
-                new usersdao().addUser(db, String.valueOf(usernameEditText1.getText()), String.valueOf(edtPassword.getText()), esc);
+
 
                 if (usernameEditText1.getText().toString().equals("") || edtPassword.getText().toString().equals("")) {
                     Toast.makeText(LoginActivity.this, "Please enter your Username and Password", Toast.LENGTH_SHORT).show();
                     return;
                 } else {
+                    //escooters esc = new escooters(1, "xiaomi", "martı", "181180761", "2020");
+                    new usersdao().addUser(db, String.valueOf(usernameEditText1.getText()).trim(), String.valueOf(edtPassword.getText()).trim());
+
                     ArrayList<users> addedUsersList = new usersdao().getallUsers(db);
                     for (users u : addedUsersList) {
 
-                        Log.e(String.valueOf(u.getUser_id()), u.getUser_name() + "---" + u.getUser_password() + "---" + u.getUsed_escooter().getEscooter_model());
+                        Log.e(String.valueOf(u.getUser_id()), u.getUser_name() + "---" + u.getUser_password() + "---" + u.getUsed_escooter().getEscooter_model()+ "---" + u.getUsed_escooter().getEscooter_number());
+
                     }
                     Toast.makeText(LoginActivity.this, "User " + usernameEditText1.getText().toString() + " Created.", Toast.LENGTH_SHORT).show();
                     usernameEditText1.setText("");
@@ -106,7 +110,8 @@ public class LoginActivity extends AppCompatActivity /*implements View.OnTouchLi
 
         copyDatabase();
         //veri silme ve güncelleme işlemleri deneme istenildiği yerde buraya bakarak kullanılabilir
-       // new usersdao().deleteUser(db, 5);//silme işlemi
+         new usersdao().deleteUser(db, 10);//silme işlemi
+
 
         //new usersdao().updateUser(db,2,"dogukan","ankara0666","xiaomi redmixx");//güncelleme işlemi
 
@@ -114,7 +119,7 @@ public class LoginActivity extends AppCompatActivity /*implements View.OnTouchLi
         ArrayList<users> addedUsersList = new usersdao().getallUsers(db);
         for (users u : addedUsersList) {
 
-            Log.e(String.valueOf(u.getUser_id()), u.getUser_name() + "---" + u.getUser_password() + "---" + String.valueOf(u.getUsed_escooter().getEscooter_model()));
+            Log.e(String.valueOf(u.getUser_id()), u.getUser_name() + "---" + u.getUser_password() + "---" + String.valueOf(u.getUsed_escooter().getEscooter_model())+ "---" + u.getUsed_escooter().getEscooter_number());
         }
 
         //veri sayisi fonksiyonu
@@ -196,9 +201,11 @@ public class LoginActivity extends AppCompatActivity /*implements View.OnTouchLi
                 if (isChecked) {
                     // show password
                     edtPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    //startService(new Intent(LoginActivity.this,MyServis.class));//start ve stop service fonksiyonları bir switch butonu ile tetiklenebilir burada kullanılması normalde gereksiz
                 } else {
                     // hide password
                     edtPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    //stopService(new Intent(LoginActivity.this,MyServis.class));//start ve stop service fonksiyonları bir switch butonu ile tetiklenebilir burada kullanılması normalde gereksiz
                 }
 
 

@@ -30,7 +30,7 @@ public class ActivityB1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b1);
 
-       gridView = findViewById(R.id.gridView);
+        gridView = findViewById(R.id.gridView);
 
 
         countries.add("Turkey");
@@ -50,7 +50,7 @@ public class ActivityB1 extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast toast = Toast.makeText(getApplicationContext(), " Selected Country : " + countries.get(i), Toast.LENGTH_SHORT);
 
-                toast.setGravity(Gravity.BOTTOM,0,200);
+                toast.setGravity(Gravity.BOTTOM, 0, 200);
                 toast.show();
             }
         });

@@ -11,14 +11,14 @@ import java.util.ArrayList;
 
 public class usersdao {
 
-    public void addUser(DatabaseHelper db, String user_name, String user_password, escooters used_escooter) {
+    public void addUser(DatabaseHelper db, String user_name, String user_password /* ,escooters used_escooter*/) {
 
         SQLiteDatabase dbx = db.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("user_name", user_name);
         values.put("user_password", user_password);
-        values.put("used_escooter_id", String.valueOf(used_escooter.getEscooter_id()));
-
+        values.put("used_escooter_id",3);// String.valueOf(used_escooter.getEscooter_id())
+//        new escootersdao().addEscooter(db,"xiaomi","martı","181180761","2020");
         dbx.insertOrThrow("users", null, values);
         dbx.close();
 

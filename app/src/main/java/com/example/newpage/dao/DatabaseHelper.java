@@ -30,7 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "user_name	TEXT NOT NULL," +
                 "user_password	TEXT NOT NULL," +
                 "used_escooter_id INTEGER NOT NULL,"+
-                "FOREIGN KEY (used_escooter_id) REFERENCES escooters (escooter_id)" + ");"
+                "FOREIGN KEY (used_escooter_id) REFERENCES escooters(escooter_id)" + ");"
 
         );
 

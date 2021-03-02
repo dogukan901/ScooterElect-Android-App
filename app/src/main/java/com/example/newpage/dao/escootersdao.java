@@ -1,5 +1,6 @@
 package com.example.newpage.dao;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -28,5 +29,19 @@ public class escootersdao {
         }
 
         return escootersArrayList;
+    }
+
+
+    public void addEscooter(DatabaseHelper db, String escooter_model, String escooter_name,String escooter_number,String escooter_model_year) {
+
+        SQLiteDatabase dbx = db.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("escooter_model", escooter_model);
+        values.put("escooter_name",escooter_name);
+        values.put("escooter_number",escooter_number);// String.valueOf(used_escooter.getEscooter_id())
+        values.put("escooter_model_year",escooter_model_year);
+        dbx.insertOrThrow("escooters", null, values);
+//        dbx.close();
+
     }
 }
