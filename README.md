@@ -3,3 +3,5 @@ This is a pre alpha version of my renting based price comparison escooter app wi
 
 
 ![escooter](https://user-images.githubusercontent.com/58824480/109747430-2945c700-7be8-11eb-9b1d-257845f0956b.png)
+![escooter2](https://user-images.githubusercontent.com/58824480/109747519-5003fd80-7be8-11eb-93c0-5b4e590eb06b.png)
+
