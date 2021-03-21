@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "814035534264",
+    "project_id": "scooterent-e334b",
+    "storage_bucket": "scooterent-e334b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814035534264:android:bf95806190d5f759740f4d",
+        "android_client_info": {
+          "package_name": "com.example.newpage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814035534264-r52vcq0vbg238js80mlh3kli0eiak0ga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHAQSY7ZcsBWJR2PZTxkYytDFeHqTuu1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814035534264-r52vcq0vbg238js80mlh3kli0eiak0ga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814035534264:android:81c756ded8b8fd81740f4d",
+        "android_client_info": {
+          "package_name": "com.info.fbpushnotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814035534264-r52vcq0vbg238js80mlh3kli0eiak0ga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHAQSY7ZcsBWJR2PZTxkYytDFeHqTuu1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814035534264-r52vcq0vbg238js80mlh3kli0eiak0ga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

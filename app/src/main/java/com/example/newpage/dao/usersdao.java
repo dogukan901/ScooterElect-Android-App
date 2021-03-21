@@ -17,8 +17,22 @@ public class usersdao {
         ContentValues values = new ContentValues();
         values.put("user_name", user_name);
         values.put("user_password", user_password);
-        values.put("used_escooter_id",3);// String.valueOf(used_escooter.getEscooter_id())
+        values.put("used_escooter_id", 3);// String.valueOf(used_escooter.getEscooter_id())
 //        new escootersdao().addEscooter(db,"xiaomi","martı","181180761","2020");
+        dbx.insertOrThrow("users", null, values);
+        dbx.close();
+
+    }
+
+
+    public void addUserWTel(DatabaseHelper db, String user_name, String user_tel) {
+
+        SQLiteDatabase dbx = db.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("user_name", user_name);
+        values.put("user_password", user_tel);
+        values.put("used_escooter_id", 3);// String.valueOf(used_escooter.getEscooter_id())
+
         dbx.insertOrThrow("users", null, values);
         dbx.close();
 
@@ -33,7 +47,7 @@ public class usersdao {
 
         while (c.moveToNext()) {
 
-                    escooters escooter = new escooters(c.getInt(c.getColumnIndex("escooter_id")),
+            escooters escooter = new escooters(c.getInt(c.getColumnIndex("escooter_id")),
                     c.getString(c.getColumnIndex("escooter_model")),
                     c.getString(c.getColumnIndex("escooter_name")),
                     c.getString(c.getColumnIndex("escooter_number")),
@@ -47,7 +61,7 @@ public class usersdao {
 
             usersArrayList.add(user);
         }
-
+        dbx.close();
         return usersArrayList;
     }
 
@@ -84,16 +98,16 @@ public class usersdao {
             result = c.getInt(c.getColumnIndex("result"));
 
         }
-
-        return  result;
+        dbx.close();
+        return result;
     }
 
-    public ArrayList<users> searchUser(DatabaseHelper db,String keyword) {
+    public ArrayList<users> searchUser(DatabaseHelper db, String keyword) {
         ArrayList<users> usersArrayList = new ArrayList<>();
         SQLiteDatabase dbx = db.getWritableDatabase();
 
         Cursor c = dbx.rawQuery("SELECT * FROM users,escooters " +
-                "WHERE user_name like '%"+keyword+"%'", null);
+                "WHERE user_name like '%" + keyword + "%'", null);
 
         while (c.moveToNext()) {
             escooters escooter = new escooters(c.getInt(c.getColumnIndex("escooter_id")),
@@ -110,7 +124,7 @@ public class usersdao {
             );
             usersArrayList.add(user);
         }
-
-        return  usersArrayList;
+        dbx.close();
+        return usersArrayList;
     }
 }

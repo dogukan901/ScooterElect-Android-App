@@ -25,7 +25,7 @@ public class ActivityC extends AppCompatActivity {
         setContentView(R.layout.activity_c);
 
 
-        ButtonGotoD = findViewById(R.id.buttonGotoD);
+        ButtonGotoD = findViewById(R.id.buttonGotoC1);
         checkBoxMartı = findViewById(R.id.checkBoxMartı);
         checkBoxVolta = findViewById(R.id.checkBoxVolta);
         checkBoxXiaomi = findViewById(R.id.checkBoxXiaomi);
@@ -36,13 +36,13 @@ public class ActivityC extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkBoxMartı.isChecked() || checkBoxVolta.isChecked() || checkBoxXiaomi.isChecked()) {
 
-                    startActivity(new Intent(ActivityC.this, ActivityD.class));
+                    startActivity(new Intent(ActivityC.this, ActivityC1.class));
                 } else {
 
                     Toast.makeText(ActivityC.this, "Please Select At Least One Model.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                // finish(); // flag activity clear top alternatifi bu activityi stackden çıkarır
+                // finish(); // alternatifi flag activity clear top  bu activityi stackden çıkarır
             }
         });
 

@@ -20,11 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonGotoD"
+        android:id="@+id/buttonGotoC1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="134dp"
-        android:text="GotoD"
+        android:text="GotoC1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -82,7 +82,7 @@
         android:layout_height="25dp"
         android:layout_marginBottom="38dp"
         android:max="99"
-        app:layout_constraintBottom_toTopOf="@+id/buttonGotoD"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGotoC1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />

@@ -25,6 +25,8 @@ import com.example.newpage.dao.escootersdao;
 import com.example.newpage.dao.usersdao;
 import com.example.newpage.objects.escooters;
 import com.example.newpage.objects.users;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -61,7 +63,11 @@ public class LoginActivity extends AppCompatActivity /*implements View.OnTouchLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+// Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
 
+        myRef.setValue("Hello, Worldyyyy!");
 
         SignInButton = findViewById(R.id.signInbutton);
         checkbox = findViewById(R.id.passwordcheckBox);
